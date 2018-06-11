@@ -51,6 +51,8 @@
     	<groupId>org.springframework.boot</groupId>
     	<artifactId>spring-boot-starter-web</artifactId>
     </dependency>
+
+    
   </dependencies>
 
 
@@ -69,6 +71,10 @@
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.7.0</version>
+        </plugin>
+        <plugin>
+        	<artifactId>maven-assembly-plugin</artifactId>
+        	<version>3.1.0</version>
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
