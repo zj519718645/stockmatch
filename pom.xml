@@ -75,15 +75,6 @@
         <plugin>
         	<artifactId>maven-assembly-plugin</artifactId>
         	<version>3.1.0</version>
-        	<executions>
-        		<execution>
-        			<id>make-assembly</id>
-        			<phase>package</phase>
-        			<goals>
-        				<goal>single</goal>
-        			</goals>
-        		</execution>
-        	</executions>
         	<configuration>
             	<descriptorRefs>
                 	<descriptorRef>jar-with-dependencies</descriptorRef>
@@ -93,7 +84,17 @@
         				<mainClass>com.yongquan.Application</mainClass>
         			</manifest>
         		</archive>
-        	</configuration>
+        	</configuration>        	
+        	<executions>
+        		<execution>
+        			<id>make-assembly</id>
+        			<phase>package</phase>
+        			<goals>
+        				<goal>single</goal>
+        			</goals>
+        		</execution>
+        	</executions>
+
 
         </plugin>
         <plugin>
