@@ -1,27 +1,25 @@
 package com.yongquan;
 
-import org.springframework.beans.factory.annotation.Autowired;  
-import org.springframework.web.bind.annotation.RequestMapping;  
-import org.springframework.web.bind.annotation.RequestMethod;  
-import org.springframework.web.bind.annotation.RestController;  
-  
 import javax.servlet.http.HttpServletRequest;  
 import javax.servlet.http.HttpServletResponse;  
 import java.io.IOException;  
 import java.io.PrintWriter;  
-  
-@RestController
-public class WxCheckController {  
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
+ 
+@SpringBootApplication
+public class WxCheckController {  
   
-  
-	private String TOKEN = "LiangSheng998_LoveKunan1314";
+    private String TOKEN = "LiangSheng998_LoveKunan1314";
     /** 
      * 与公众号服务器配置进行比对 
      * @param req 
      * @param res 
      */  
-	@RequestMapping("/getResult")
+    @RequestMapping("/getResult")
     public void getWxResult(HttpServletRequest req, HttpServletResponse res){  
         // 微信加密签名，signature结合了开发者填写的token参数和请求中的timestamp参数、nonce参数。  
         String signature = req.getParameter("signature");  

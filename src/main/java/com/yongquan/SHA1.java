@@ -205,12 +205,4 @@ public class SHA1 {
 		return byteArrayToHexString(getDigestOfBytes(byteData));
 	}
 
-	public static void main(String[] args) {
-		String data = "123456";
-		System.out.println(data);
-		String digest = new SHA1().getDigestOfString(data.getBytes());
-		System.out.println(digest);
-
-		// System.out.println( ToMD5.convertSHA1(data).toUpperCase());
-	}
 }
