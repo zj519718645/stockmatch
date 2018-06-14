@@ -5,12 +5,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;  
 import java.io.PrintWriter;  
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
  
-@SpringBootApplication
+@Controller
 public class WxCheckController {  
   
     private String TOKEN = "LiangSheng998_LoveKunan1314";
@@ -47,8 +46,5 @@ public class WxCheckController {
         }
     }  
   
-    public static void main(String[] args) throws Exception {
-        SpringApplication.run(WxCheckController.class, args);
-    } 
   
 }  
