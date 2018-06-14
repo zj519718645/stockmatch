@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;  
 import java.io.IOException;  
 import java.io.PrintWriter;  
-import net.binjoo.utils.SHA1;
   
 @RestController  
 @RequestMapping("/getResult")  
