@@ -40,20 +40,16 @@ public class WxCheckController {
         
         String digest = new SHA1().getDigestOfString(bigStr.getBytes()).toLowerCase();
         
-        System.out.println(req);  
+        if (digest.equals(signature)) {
+        	try {
+				res.getWriter().print(echostr);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        }
     }  
   
-    /** 
-     * 接收公众号的各种信息 
-     * @param request 
-     * @return 
-     */  
-    @RequestMapping(method = RequestMethod.POST)  
-    public String processRequest(HttpServletRequest request) {  
-        String message = wxUserService.saveWxUserOperation(request);  
-        return message;  
-    }  
-  
-  
+ 
   
 }  
