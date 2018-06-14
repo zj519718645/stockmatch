@@ -10,8 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;  
 import java.io.PrintWriter;  
   
-@RestController  
-@RequestMapping("/getResult")  
+@RestController
 public class WxCheckController {  
 
   
@@ -22,7 +21,7 @@ public class WxCheckController {
      * @param req 
      * @param res 
      */  
-    @RequestMapping(method = RequestMethod.GET)  
+	@RequestMapping("/getResult")
     public void getWxResult(HttpServletRequest req, HttpServletResponse res){  
         // 微信加密签名，signature结合了开发者填写的token参数和请求中的timestamp参数、nonce参数。  
         String signature = req.getParameter("signature");  
@@ -50,6 +49,8 @@ public class WxCheckController {
         }
     }  
   
- 
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(WxCheckController.class, args);
+    } 
   
 }  
